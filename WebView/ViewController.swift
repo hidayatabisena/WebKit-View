@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var webView: WKWebView!
     
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -37,3 +39,14 @@ class ViewController: UIViewController {
 
 }
 
+extension ViewController: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        activityIndicatorView.startAnimating()
+        activityIndicatorView.isHidden = false
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        activityIndicatorView.stopAnimating()
+        activityIndicatorView.isHidden = true
+    }
+}

@@ -24,19 +24,25 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="35O-zr-pAs">
+                                <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="35O-zr-pAs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ESI-3e-i50"/>
                             <constraint firstItem="DLK-9R-Tfx" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="GOR-h4-cmz"/>
                             <constraint firstItem="DLK-9R-Tfx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HmS-PX-H3F"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DLK-9R-Tfx" secondAttribute="trailing" id="aIc-0u-ttH"/>
                             <constraint firstItem="DLK-9R-Tfx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b8a-d3-8oU"/>
+                            <constraint firstItem="35O-zr-pAs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bWj-1O-mbO"/>
                             <constraint firstItem="DLK-9R-Tfx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oIV-Ol-H6I"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YPE-hV-8KJ"/>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="35O-zr-pAs" id="o11-9m-OTe"/>
                         <outlet property="webView" destination="DLK-9R-Tfx" id="PKk-OA-L0E"/>
                     </connections>
                 </viewController>
